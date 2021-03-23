@@ -1,6 +1,9 @@
-const add = require('./modul/add');
+const fs = require("fs")
 
-const result = add(2,3);
-console.log(result);
+let startTime = Date.now();
+let text = "default";
+setTimeout(()=>{
+    console.log(Date.now() - startTime,"first");
 
-
+},3000);
+console.log(Date.now() - startTime,"second");
