@@ -1,9 +1,14 @@
-const fs = require("fs")
+//json
+ const fs =require("fs");
+const data = fs.readFileSync("./vocab.json", {encoding:"utf-8"});
+// // console.log(typeof data); //타입알아보기
+// console.log(JSON.parse(data)); //오브젝트로 변환
+let arr = JSON.parse(data);
+// console.log (arr[2]);
+const ob = {
+    name: "yoo",
+    age: 28,
+    description: "i go to school.",
+};
 
-let startTime = Date.now();
-let text = "default";
-setTimeout(()=>{
-    console.log(Date.now() - startTime,"first");
-
-},3000);
-console.log(Date.now() - startTime,"second");
+fs.writeFileSync("test.json", JSON.stringify(ob, null, 2));
