@@ -1,14 +1,17 @@
-//json
- const fs =require("fs");
-const data = fs.readFileSync("./vocab.json", {encoding:"utf-8"});
-// // console.log(typeof data); //타입알아보기
-// console.log(JSON.parse(data)); //오브젝트로 변환
-let arr = JSON.parse(data);
-// console.log (arr[2]);
-const ob = {
-    name: "yoo",
-    age: 28,
-    description: "i go to school.",
-};
+const http = require("http");
 
-fs.writeFileSync("test.json", JSON.stringify(ob, null, 2));
+const server = http.createServer((req,res) => {
+    // console.log(req.url);
+    if(req.url === "/"){
+    res.write("<h1>hello nodejs</h1>");
+    }else{
+    res.write('<h1>you hane entered this url</h1>'+req.url)
+    }
+    res.end();
+
+});
+//127.0.0.1 
+//localhost
+server.listen(3000,()=>{
+    console.log("The server is listening on port 3000");
+});
