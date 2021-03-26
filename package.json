@@ -9,6 +9,7 @@
   "author": "jaeseok yoo",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.17.1",
     "readline-sync": "^1.4.10"
   }
 }
