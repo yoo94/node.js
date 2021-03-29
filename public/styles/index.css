@@ -1,0 +1,46 @@
+.flex-box {
+  display: flex;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-2 {
+  flex: 2;
+}
+.flex-3 {
+  flex: 3;
+}
+.flex-4 {
+  flex: 4;
+}
+.flex-5 {
+  flex: 5;
+}
+.flex-6 {
+  flex: 6;
+}
+.flex-7 {
+  flex: 7;
+}
+.card {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 5px;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main-word {
+  text-align: center;
+  min-width: 300px;
+}
+.word-list {
+  min-width: 300px;
+}
+.delete-btn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
